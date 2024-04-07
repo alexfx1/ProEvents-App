@@ -13,7 +13,7 @@
           <a class="nav-link" href="#">Palestrantes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contatos</a>
+          <a class="nav-link" (click)="openModal(template)">Contatos</a>
         </li>
       </ul>
 
@@ -37,3 +37,21 @@
     </div>
   </div>
 </nav>
+
+<ng-template #template>
+  <div class="modal-body text-center">
+    <p>Adicionar um usuário</p>
+    <form #userForm="ngForm" (ngSubmit)="addUser($event)">
+      <label for="userName">User name:</label><br>
+      <input type="text" id="userName" name="userName" [(ngModel)]="userName" required><br>
+      <label for="userEmail">E-mail:</label><br>
+      <input type="text" id="userEmail" name="userEmail" [(ngModel)]="userEmail" required><br>
+      <label for="userEmail">Senha:</label><br>
+      <input type="password" id="userPassword" name="userPassword" [(ngModel)]="userPassword" required><br>
+      <i class="far fa-eye" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+      <label for="userAdmin">Full-Access:</label><br>
+      <input type="checkbox" id="userAdmin" name="userAdmin" [(ngModel)]="userAdmin"><br><br>
+      <input type="submit" id="submit" value="Enviar"><br><br>
+    </form>
+  </div>
+</ng-template>
