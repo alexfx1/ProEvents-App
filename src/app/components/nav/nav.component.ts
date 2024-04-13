@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { EventoService } from '../services/evento.service';
+import { EventoService } from '../../services/evento.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
-import { User } from '../models/User';
+import { User } from '../../models/User';
 import { FormBuilder } from '@angular/forms';
 
 @Component({

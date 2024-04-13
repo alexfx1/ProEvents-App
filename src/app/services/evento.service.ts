@@ -7,7 +7,7 @@ import { UserResponseDto } from '../models/dto/UserResponseDto';
 
 @Injectable()
 export class EventoService {
-  baseUrl = 'https://localhost:7171';
+  baseUrl = 'https://localhost:44347';
   apiPedidos = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
